@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Teams
 {
-    protected function getAllMatches()
+    public function getAllMatches()
     {
         return [
             'MexicoCanada' => [

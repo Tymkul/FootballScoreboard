@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 
 class FootballGame extends Teams
@@ -87,7 +86,7 @@ class FootballGame extends Teams
             ['total', 'desc'],
         ]);
     }
-    public function forgetMatch($key)
+    public function removeMatch($key)
     {
         $teams = collect($this->getAllMatches());
         $teams->forget(Cache::get($key));
